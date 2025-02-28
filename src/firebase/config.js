@@ -20,25 +20,6 @@ const {
 
 
 // Your web app's Firebase configuration
-// dev/Production
-// const firebaseConfig = {
-//   apiKey: "AIzaSyB05UV8v1aIDpw9d1VNEeOaUZfC165Qlj4",
-//   authDomain: "journal-app-c8bfa.firebaseapp.com",
-//   projectId: "journal-app-c8bfa",
-//   storageBucket: "journal-app-c8bfa.firebasestorage.app",
-//   messagingSenderId: "312901558999",
-//   appId: "1:312901558999:web:917721981b549abe4f8692"
-// };
-// Testing
-//  const firebaseConfig = {
-//    apiKey: "AIzaSyDbwBWHLzRfeMY83F-gPvycg0J8_fB7QLI",
-//    authDomain: "journal-test-a6db3.firebaseapp.com",
-//    projectId: "journal-test-a6db3",
-//    storageBucket: "journal-test-a6db3.firebasestorage.app",
-//    messagingSenderId: "418724212455",
-//    appId: "1:418724212455:web:a567ef63c8444bb403bc42",
-//    measurementId: "G-Z277X1ZP12"
-//  };
   const firebaseConfig = {
     apiKey: VITE_APIKEY,
     authDomain: VITE_AUTHDOMAIN,
