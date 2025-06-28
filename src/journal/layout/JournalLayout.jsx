@@ -1,25 +1,40 @@
-import { Box, Toolbar } from '@mui/material'
-import React from 'react'
+import { Box, Toolbar } from '@mui/material';
 import { NavBar, SideBar } from '../components';
+import { useState } from 'react';
 
-const drawerWidth  = 240;
+export const JournalLayout = ({ children }) => {
+    const drawerWidth = 240;
+    const [mobileOpen, setMobileOpen] = useState(false);
 
-export const JournalLayout = ({children}) => {
-  return (
-    <Box sx={{ display: 'flex'}} className='animate__animated animate__fadeIn animate__faster'>
-        {/* navbar */}
-        <NavBar drawerWidth= {drawerWidth}/>
-        {/* sidebar */}
-        <SideBar drawerWidth={drawerWidth}/>
-        <Box
-            component='main'
-            sx={{flexGrow:1, p:3}}
-        >
-        {/* toolbar */}
-        <Toolbar/>
-        {children}
+    const handleDrawerToggle = () => {
+        setMobileOpen(!mobileOpen);
+    };
 
+    return (
+        <Box sx={{ display: 'flex' }}>
+            <NavBar 
+                drawerWidth={drawerWidth} 
+                onToggleSidebar={handleDrawerToggle}
+            />
+            
+            <SideBar 
+                drawerWidth={drawerWidth}
+                mobileOpen={mobileOpen}
+                setMobileOpen={setMobileOpen}
+            />
+
+            <Box 
+                component='main'
+                sx={{ 
+                    flexGrow: 1, 
+                    p: 3,
+                    width: { sm: `calc(100% - ${drawerWidth}px)` },
+                    ml: { sm: `${drawerWidth}px` }
+                }}
+            >
+                <Toolbar />
+                { children }
+            </Box>
         </Box>
-    </Box>
-  )
+    )
 }

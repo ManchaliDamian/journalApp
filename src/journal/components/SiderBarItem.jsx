@@ -1,8 +1,8 @@
 
-import { ListItem, ListItemButton, ListItemIcon, ListItemText, Grid } from '@mui/material';
+import { ListItem, ListItemButton, ListItemIcon, ListItemText, Grid, Divider } from '@mui/material';
 import { TurnedInNot } from '@mui/icons-material';
 import { useMemo } from 'react';
-import { setActiveNote } from '../../store/journal';
+import { setActiveNote } from '../../store/journal/index';
 import { useDispatch } from 'react-redux';
 
 export const SiderBarItem = ({ title = '', body, id, date, imageUrls = [] }) => {

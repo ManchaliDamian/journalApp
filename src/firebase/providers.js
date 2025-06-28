@@ -48,7 +48,7 @@ export const registrerUserWithEmailPassword = async ({email, password, displayNa
             uid, photoURL, email, displayName
         }
     } catch (error) {
-        console.log(error);
+        
         
         return { ok: false, errorMessage: 'El correo ya fue registrado con anterioridad.' }
     }
@@ -68,7 +68,7 @@ export const loginWithEmailPassword = async({email,password}) => {
     }
     
     } catch (error) {
-        console.log(error);
+        
         
         return { ok: false, errorMessage: 'FirebaseError: Firebase: Error (auth/invalid-credential).' }
     }
