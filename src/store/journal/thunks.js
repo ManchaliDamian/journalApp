@@ -1,4 +1,4 @@
-import { collection, deleteDoc, doc, documentId, setDoc } from "firebase/firestore/lite";
+import { collection, deleteDoc, doc, documentId, setDoc } from "firebase/firestore";
 import { firebaseDB } from "../../firebase/config";
 import { addNewEmptyNote, setActiveNote, savingNewNote, setNotes, setSaving, updateNote, setPhotosActiveNote, deleteNoteById } from "./journalSlice";
 import { loadNotes } from "../../helpers/loadNotes";
